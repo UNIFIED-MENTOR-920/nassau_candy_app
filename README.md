@@ -24,3 +24,10 @@ streamlit run app.py
 3. **Factory Simulator** — Per-product factory performance comparison
 4. **What-If Analysis** — Scenario simulation with speed vs profit slider
 5. **Recommendations** — Ranked factory reassignment recommendations with risk & Sankey flow
+
+### Notes
+- The dataset file `Nassau_Candy_Distributor.csv` is included in this repository for local development and analysis.
+- This project is configured to run with Streamlit and the dependencies listed in `requirements.txt`.
+
+### GitHub Repository
+- `https://github.com/UNIFIED-MENTOR-920/nassau_candy_app`
