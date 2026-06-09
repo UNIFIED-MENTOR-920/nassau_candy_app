@@ -551,10 +551,10 @@ with t1:
     st.plotly_chart(fig_map, width='stretch')
 
     # -- Raw data --------------------------------------------
-    with st.expander("??  View Raw / Filtered Data"):
+    with st.expander("📊  View Raw / Filtered Data"):
         st.dataframe(df.reset_index(drop=True), width='stretch', height=320)
         st.download_button(
-            "??  Download Filtered CSV",
+            "📥  Download Filtered CSV",
             df.to_csv(index=False).encode(),
             "nassau_filtered.csv", "text/csv",
         )
@@ -564,12 +564,12 @@ with t1:
 #  TAB 2  �  PREDICTIVE MODEL
 # -------------------------------------------------------------
 with t2:
-    st.markdown("### Predictive Modeling � Shipping Lead Time")
+    st.markdown("### Predictive Modeling — Shipping Lead Time")
     st.info(
         "Three regression models are trained on **Ship Mode, Region, Factory, Division** "
         "to predict shipping lead time. The best-performing model (lowest RMSE) is used "
         "in the Simulator and Recommendations tabs.",
-        icon="??",
+        icon="ℹ️",
     )
 
     # -- Model comparison cards ------------------------------
@@ -585,7 +585,7 @@ with t2:
             f'<div class="mcard-stat">'
             f'RMSE : <b>{res["rmse"]}</b><br>'
             f'MAE  : <b>{res["mae"]}</b><br>'
-            f'R�   : <b>{res["r2"]}</b>'
+            f'R²   : <b>{res["r2"]}</b>'
             f'</div></div>',
             unsafe_allow_html=True,
         )
@@ -1281,4 +1281,5 @@ with t5:
     to improve shipping efficiency without sacrificing profitability.</p>
     </div>
     """, unsafe_allow_html=True)
+
 
