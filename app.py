@@ -36,8 +36,9 @@ st.markdown("""
 <style>
 /* ----- KPI cards ----- */
 .kpi-wrap {
-    background: var(--background-color, #fff);
-    border: 1px solid rgba(128,128,128,.18);
+    /* Use a subtle translucent background so cards work on both themes */
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
     border-radius: 12px;
     padding: 18px 20px 14px;
     margin-bottom: 4px;
@@ -48,14 +49,14 @@ st.markdown("""
     font-weight: 600;
     letter-spacing: .8px;
     text-transform: uppercase;
-    color: var(--text-color);
+    color: var(--text-color, #e6e6e6);
     opacity: .55;
     margin: 0 0 6px;
 }
 .kpi-value {
     font-size: 26px;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--text-color, #fff);
     margin: 0;
     line-height: 1.1;
 }
@@ -63,7 +64,7 @@ st.markdown("""
     font-size: 11px;
     margin: 4px 0 0;
     opacity: .55;
-    color: var(--text-color);
+    color: var(--text-color, #d1d5db);
 }
 
 /* ----- section separator ----- */
